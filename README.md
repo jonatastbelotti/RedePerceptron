@@ -18,3 +18,5 @@ Email: jonatas.t.belotti@hotmail.com
 <p><b>Arquivo "Rede Perceptron.exe" - </b> Arquivo executavel da rede para ser executado em Windows.</p>
 <p><b>Arquivo "RedePerceptron.jar" - </b> JAR da rede para ser executado em linux ou Windows.</p>
 <p><b>Arquivo "Relatorio_Perceptron.pdf" - </b> Arquivo PDF contendo o relatório entregue para a diciplina.</p>
+
+<p style="color: red"><b>Atenção - </b> para executar os arquivos "RedePerceptron.jar" ou "Rede Perceptron.exe" é necessário ter o <a target="_blank" href="https://www.java.com/pt_BR/download/">Java JRE</a> ou <a target="_blank" href="http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html">Java JDK</a> instalado em seu computador.</p>
