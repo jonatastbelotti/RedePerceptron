@@ -5,6 +5,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Random;
 
 /**
  *
@@ -21,6 +22,17 @@ public class Perceptron {
   private double ultimaResposta;
   private int numEpocasTreinamento;
 
+  public Perceptron() {
+    Random random = new Random();
+    
+    this.peso0 = random.nextDouble();
+    this.peso1 = random.nextDouble();
+    this.peso2 = random.nextDouble();
+    this.peso3 = random.nextDouble();
+    this.ultimaResposta = 0.0;
+    this.numEpocasTreinamento = 0;
+  }
+  
   public Perceptron(double peso0, double peso1, double peso2, double peso3) {
     this.peso0 = peso0;
     this.peso1 = peso1;

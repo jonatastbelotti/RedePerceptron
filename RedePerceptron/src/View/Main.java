@@ -686,24 +686,18 @@ public class Main extends javax.swing.JFrame {
   }
 
   private void treinarRede() {
-    Random random;
-    double p0 = 0.0;
-    double p1 = 0.0;
-    double p2 = 0.0;
-    double p3 = 0.0;
+    double p0;
+    double p1;
+    double p2;
+    double p3;
 
     if (jChPesosAleatorios.isSelected()) {
-      random = new Random();
+      this.redePerceptron = new Perceptron();
 
-      p0 = random.nextDouble();
-      p1 = random.nextDouble();
-      p2 = random.nextDouble();
-      p3 = random.nextDouble();
-
-      jTxtPeso0.setText(Double.toString(p0).replace(".", ","));
-      jTxtPeso1.setText(Double.toString(p1).replace(".", ","));
-      jTxtPeso2.setText(Double.toString(p2).replace(".", ","));
-      jTxtPeso3.setText(Double.toString(p3).replace(".", ","));
+      jTxtPeso0.setText(Double.toString(redePerceptron.getPeso0()).replace(".", ","));
+      jTxtPeso1.setText(Double.toString(redePerceptron.getPeso1()).replace(".", ","));
+      jTxtPeso2.setText(Double.toString(redePerceptron.getPeso2()).replace(".", ","));
+      jTxtPeso3.setText(Double.toString(redePerceptron.getPeso3()).replace(".", ","));
 
       jTxtPeso0.setCaretPosition(0);
       jTxtPeso1.setCaretPosition(0);
@@ -721,9 +715,10 @@ public class Main extends javax.swing.JFrame {
       p1 = Double.parseDouble(jTxtPeso1.getText().replace(",", "."));
       p2 = Double.parseDouble(jTxtPeso2.getText().replace(",", "."));
       p3 = Double.parseDouble(jTxtPeso3.getText().replace(",", "."));
+      
+      this.redePerceptron = new Perceptron(p0, p1, p2, p3);
     }
 
-    this.redePerceptron = new Perceptron(p0, p1, p2, p3);
 
     if (this.redePerceptron.treinarRede(arquivoTreinamento) == false) {
       JOptionPane.showMessageDialog(null, "Ocorreu um erro ao treinar a rede Perceptron, por favor tente novamente.\nCaso o erro persista entre em contato com o desenvolvedor.", "Erro ao treinar rede", JOptionPane.ERROR_MESSAGE);
